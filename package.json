@@ -1,0 +1,47 @@
+{
+  "name": "express-path-route",
+  "version": "1.1.0",
+  "description": "(from: express-load-routes)Loads express.js routers from a given folder recursively and mounts them",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bigfactory/express-path-route.git"
+  },
+  "keywords": [
+    "routes",
+    "express",
+    "dynamic",
+    "router"
+  ],
+  "author": {
+    "name": "Gabriel Vaquer"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bigfactory/express-path-route/issues"
+  },
+  "homepage": "https://github.com/bigfactory/express-path-route",
+  "dependencies": {
+    "app-root-path": "^1.0.0"
+  },
+  "devDependencies": {
+    "express": "^4.10.6",
+    "chai": "^1.10.0",
+    "chai-fs": "^0.1.0",
+    "mocha": "^2.0.1",
+    "supertest": "^0.15.0"
+  },
+  "maintainers": [
+    {
+      "name": "tujamaica",
+      "email": "tujamaica@gmail.com"
+    },
+    {
+      "name": "xiaocong.hxc",
+      "email": "xiaocong.hxc@qq.com"
+    }
+  ]
+}
