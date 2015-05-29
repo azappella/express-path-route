@@ -1,9 +1,9 @@
-express-load-routes
+express-path-route
 ===================
 
 **Notice:**
 
-This project is taken over from Gabriel Vaquer 's NPM package express-load-routes.
+This project is taken over from Gabriel Vaquer 's NPM package [express-load-routes](https://www.npmjs.com/package/express-load-routes).
 
 Just modified some code to conform with my usage.
 
@@ -141,7 +141,7 @@ DELETE /users/:id
 
 ## Installation & Usage
 ```
-npm install express-load-routes --save
+npm install express-path-route --save
 ```
 
 ```javascript
@@ -155,12 +155,12 @@ app.use(express.static(__dirname, '/public'));
 
 // require the module and pass the 
 // express instance
-require('express-load-routes')(app);
+require('express-path-route')(app);
 
 // if you don't use the default routes folder
 // you can specify the path to your own
 // as the second argument
-require('express-load-routes')(app, './path/to/routes');
+require('express-path-route')(app, './path/to/routes');
 
 module.exports = app;
 ```
