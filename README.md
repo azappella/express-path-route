@@ -1,13 +1,7 @@
-express-path-route
+express-
 ===================
 
-**Notice:**
-
-This project is taken over from Gabriel Vaquer 's NPM package [express-load-routes](https://www.npmjs.com/package/express-load-routes).
-
-Just modified some code to conform with my usage.
-
-Which is:
+Example usage:
 
 ```
 myapp
@@ -34,7 +28,7 @@ In this way, I can put some path base middlewares to a assign path, such as in a
 var auth = require('middlewares/auth');
 
 router.use(auth);
-``` 
+```
 
 ------
 
@@ -86,13 +80,13 @@ var express = require('express')
 var router = express.Router();
 
 router
-  
+
   .get('/', function(req, res) {
     User.find({}, function(err, users) {
       res.status(200).json(users);
     });
   })
-  
+
   .get('/:id', function(req, res) {
     var id = req.params.id;
     User.findById(id, function(err, user) {
@@ -101,7 +95,7 @@ router
       res.status(200).json(user);
     });
   })
-  
+
   .post('/', function(req, res) {
     var body = req.body;
     var user = new User(body);
@@ -110,7 +104,7 @@ router
       res.status(201).json(user);
     });
   })
-  
+
   .patch('/:id', function(req, res) {
     var id = req.params.id;
     var body = req.body;
@@ -119,7 +113,7 @@ router
       res.sendStatus(200);
     });
   })
-  
+
   .delete('/:id', function(req, res) {
     var id = req.params.id;
     User.findOneAndRemove(id, function(err) {
@@ -153,7 +147,7 @@ var app = express();
 app.use(express.static(__dirname, '/public'));
 // ...
 
-// require the module and pass the 
+// require the module and pass the
 // express instance
 require('express-path-route')(app);
 
@@ -165,4 +159,6 @@ require('express-path-route')(app, './path/to/routes');
 module.exports = app;
 ```
 
-Hope you like it. Cheers.
+## Credits ##
+
+This a fork from https://github.com/bigfactory/express-path-route, which is itself a fork from Gabriel Vaquer 's NPM package [express-load-routes](https://www.npmjs.com/package/express-load-routes).
