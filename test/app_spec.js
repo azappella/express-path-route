@@ -1,7 +1,7 @@
 var request = require('supertest');
 var express = require('express');
 var app = express();
-require('../lib/index')(app);
+require('../src/index')(app);
 
 describe('GET /', function() {
 

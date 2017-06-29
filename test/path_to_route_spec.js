@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var express = require('express');
-var loadRoutes = require('../lib/index')(express(), '../routes');
+var loadRoutes = require('../src/index')(express(), '../routes');
 var pathToRoute = loadRoutes.pathToRoute;
 
 describe('LoadRoutes.prototype.pathToRoute', function() {

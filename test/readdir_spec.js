@@ -3,7 +3,7 @@ var fs = require('fs');
 var chai = require('chai');
 var expect = chai.expect;
 var express = require('express');
-var loadRoutes = require('../lib/index')(express());
+var loadRoutes = require('../src/index')(express());
 chai.use(require('chai-fs'));
 
 describe('LoadRoutes.prototype.readdir', function() {
