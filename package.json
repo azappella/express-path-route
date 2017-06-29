@@ -1,14 +1,14 @@
 {
-  "name": "express-path-route",
-  "version": "1.1.3",
-  "description": "(from: express-load-routes)Loads express.js routers from a given folder recursively and mounts them",
-  "main": "lib/index.js",
+  "name": "express-route-loading",
+  "version": "1.1.4",
+  "description": "Loads express.js routers from a given folder recursively and mounts them",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bigfactory/express-path-route.git"
+    "url": "git@github.com:azappella/express-route-loading.git"
   },
   "keywords": [
     "routes",
@@ -17,13 +17,13 @@
     "router"
   ],
   "author": {
-    "name": "Gabriel Vaquer"
+    "name": "Andrew Zappella <andrew.zappella@gmail.com>"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bigfactory/express-path-route/issues"
+    "url": "https://github.com/azappella/express-route-loading/issues"
   },
-  "homepage": "https://github.com/bigfactory/express-path-route",
+  "homepage": "https://github.com/azappella/express-route-loading",
   "dependencies": {
     "app-root-path": "^1.0.0"
   },
@@ -33,15 +33,5 @@
     "chai-fs": "^0.1.0",
     "mocha": "^2.0.1",
     "supertest": "^0.15.0"
-  },
-  "maintainers": [
-    {
-      "name": "tujamaica",
-      "email": "tujamaica@gmail.com"
-    },
-    {
-      "name": "xiaocong.hxc",
-      "email": "xiaocong.hxc@qq.com"
-    }
-  ]
+  }
 }

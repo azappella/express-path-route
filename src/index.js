@@ -9,7 +9,7 @@ function LoadRoutes(app, target) {
     if (!(this instanceof LoadRoutes)) {
         return new LoadRoutes(app, target);
     }
-    this.init(app, target);
+    this.watch(app, target);
 }
 
 /**
@@ -26,6 +26,18 @@ LoadRoutes.prototype.init = function(app, target) {
         app.use(route, router);
     }, this);
 };
+
+LoadRoutes.prototype.watch = function(app, target) {
+    target = resolve(typeof target === 'string' ? target : 'routes');
+    this.readdir(target).forEach(function(file) {
+        const route = this.pathToRoute(file, target);
+        app.use(route, function (req, res, next) {
+            const router = require(file);
+            if (typeof router !== 'function') return;
+            router(req, res, next);
+        });
+    }, this);
+}
 
 /**
  * Reads all the files and folder within a given target
